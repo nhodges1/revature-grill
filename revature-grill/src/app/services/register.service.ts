@@ -6,7 +6,7 @@ import { Register } from '../models/register';
 @Injectable({
     providedIn: 'root'
 })
-export class Register1Service {
+export class RegisterService {
 
     constructor(private http : HttpClient) {}
 
