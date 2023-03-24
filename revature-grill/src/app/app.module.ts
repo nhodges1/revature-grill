@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Input1Component } from './components/input1/input1.component';
-import { Register1Component } from './pages/register1/register1.component';
+import { Input1Component } from './components/input/input.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Input1Component,
-    Register1Component
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import { Register1Component } from './pages/register1/register1.component';
   providers: [],
   exports: [
     Input1Component,
-    Register1Component
+    RegisterComponent
 ],
   bootstrap: [AppComponent]
 })
