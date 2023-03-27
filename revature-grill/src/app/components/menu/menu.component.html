@@ -7,23 +7,26 @@
   <button>Search</button>
 </div>
 <div *ngIf="allMounted">
-  <div *ngFor="let item of items">
-    <img src='assets/images/{{item.foodId}}.jpg'>
+  <div class="itemlist" *ngFor="let item of items">
+    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
+    <p>Add to cart <button>+</button></p>
   </div>
 </div>
 <div *ngIf="bfMounted">
-  <div *ngFor="let item of items">
-    <img src='assets/images/{{item.foodId}}.jpg'>
+  <div class="itemlist" *ngFor="let item of items">
+    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
+    <p>Add to cart <button>+</button></p>
   </div>
 </div>
 <div *ngIf="ldMounted">
-  <div *ngFor="let item of items">
-    <img src='assets/images/{{item.foodId}}.jpg'>
+  <div class="itemlist" *ngFor="let item of items">
+    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
+    <p>Add to cart <button>+</button></p>
   </div>
 </div>
