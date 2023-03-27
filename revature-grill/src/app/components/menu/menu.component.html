@@ -1,7 +1,26 @@
 <div class ="selection" role="filter">
-  <button class="type" id="breakfast" style="font-size: 1.2em;">Breakfast</button>
-  <button class="type" id="non-breakfast" style="font-size: 1.2em;">Lunch/Dinner</button>
+  <button (click)="swapAllMount()" class="type" id="all" style="font-size: 1.2em;">All Items</button>
+  <button (click)="swapBfMount()" class="type" id="breakfast" style="font-size: 1.2em;">Breakfast</button>
+  <button (click)="swapLdMount()" class="type" id="non-breakfast" style="font-size: 1.2em;">Lunch/Dinner</button>
   <div class="spacer"></div>
-  <p style="font-size: 1.5em;">Search:</p>
   <input>
+  <button>Search</button>
+</div>
+<div *ngIf="allMounted">
+  <div *ngFor="let item of items">
+    <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
+    <p>{{item.priceOfItem}}</p>
+  </div>
+</div>
+<div *ngIf="bfMounted">
+  <div *ngFor="let item of items">
+    <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
+    <p>{{item.priceOfItem}}</p>
+  </div>
+</div>
+<div *ngIf="ldMounted">
+  <div *ngFor="let item of items">
+    <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
+    <p>{{item.priceOfItem}}</p>
+  </div>
 </div>
