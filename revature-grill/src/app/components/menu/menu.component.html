@@ -8,18 +8,21 @@
 </div>
 <div *ngIf="allMounted">
   <div *ngFor="let item of items">
+    <img src='assets/images/{{item.foodId}}.jpg'>
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
   </div>
 </div>
 <div *ngIf="bfMounted">
   <div *ngFor="let item of items">
+    <img src='assets/images/{{item.foodId}}.jpg'>
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
   </div>
 </div>
 <div *ngIf="ldMounted">
   <div *ngFor="let item of items">
+    <img src='assets/images/{{item.foodId}}.jpg'>
     <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
     <p>{{item.priceOfItem}}</p>
   </div>
