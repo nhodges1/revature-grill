@@ -4,11 +4,11 @@
 section {
     height: 90vh;
     position: relative;
-}
-
-section::before {
+  }
+  
+  section::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,8 +17,8 @@ section::before {
     background-image: url('https://images.pexels.com/photos/6493567/pexels-photo-6493567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     filter: brightness(20%);
-}
-
+  }
+  
 .reg {
     max-width: 700px;
     width: 100%;

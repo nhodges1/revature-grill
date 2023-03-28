@@ -1,3 +1,4 @@
+<section>
 <div class ="selection" role="filter">
   <button (click)="swapAllMount()" class="type" id="all" style="font-size: 1.2em;">All Items</button>
   <button (click)="swapBfMount()" class="type" id="breakfast" style="font-size: 1.2em;">Breakfast</button>
@@ -7,51 +8,67 @@
   <button (click)="foodSearch()" class="type" id="food-name" style="font-size: 1.2em;">Search</button>
 </div>
 <div *ngIf="allMounted">
-  <div class="itemlist" *ngFor="let item of items">
-    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
-    <div class="iteminfo">
-      <p> {{item.foodName}}</p>
-      <p> {{item.description}}</p>
-      <p> {{item.foodTag}}</p>
-      <p> ${{item.priceOfItem}}</p>
-      <p>Add to cart <button>+</button></p>
+  <div class="card-container">
+    <div class="itemlist" *ngFor="let item of items">
+      <button class="card">
+        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <div class="iteminfo">
+          <p> {{item.foodName}}</p>
+          <p> {{item.description}}</p>
+          <p> {{item.foodTag}}</p>
+          <p> ${{item.priceOfItem}}</p>
+          <p>Add to cart <button style="cursor: pointer;">+</button></p>
+        </div>
+      </button>
     </div>
   </div>
 </div>
 <div *ngIf="bfMounted">
-  <div class="itemlist" *ngFor="let item of items">
-    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
-    <div class="iteminfo">
-      <p> {{item.foodName}}</p>
-      <p> {{item.description}}</p>
-      <p> {{item.foodTag}}</p>
-      <p> ${{item.priceOfItem}}</p>
-      <p>Add to cart <button>+</button></p>
+  <div class="card-container">
+    <div class="itemlist" *ngFor="let item of items">
+      <div class="card">
+        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <div class="iteminfo">
+          <p> {{item.foodName}}</p>
+          <p> {{item.description}}</p>
+          <p> {{item.foodTag}}</p>
+          <p> ${{item.priceOfItem}}</p>
+          <p>Add to cart <button style="cursor: pointer;">+</button></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div *ngIf="ldMounted">
-  <div class="itemlist" *ngFor="let item of items">
-    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
-    <div class="iteminfo">
-      <p> {{item.foodName}}</p>
-      <p> {{item.description}}</p>
-      <p> {{item.foodTag}}</p>
-      <p> ${{item.priceOfItem}}</p>
-      <p>Add to cart <button>+</button></p>
+  <div class="card-container">
+    <div class="itemlist" *ngFor="let item of items">
+      <div class="card">
+        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <div class="iteminfo">
+          <p> {{item.foodName}}</p>
+          <p> {{item.description}}</p>
+          <p> {{item.foodTag}}</p>
+          <p> ${{item.priceOfItem}}</p>
+          <p>Add to cart <button style="cursor: pointer;">+</button></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div *ngIf="foodMounted">
-  <div class="itemlist" *ngFor="let item of items">
-    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
-    <div class="iteminfo">
-      <p> {{item.foodName}}</p>
-      <p> {{item.description}}</p>
-      <p> {{item.foodTag}}</p>
-      <p> ${{item.priceOfItem}}</p>
-      <p>Add to cart <button>+</button></p>
+  <div class="card-container">
+    <div class="itemlist" *ngFor="let item of items">
+      <div class="card">
+        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <div class="iteminfo">
+          <p> {{item.foodName}}</p>
+          <p> {{item.description}}</p>
+          <p> {{item.foodTag}}</p>
+          <p> ${{item.priceOfItem}}</p>
+          <p>Add to cart <button style="cursor: pointer;">+</button></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
+</section>

@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   allMounted: boolean = true;
   bfMounted: boolean = false;
   ldMounted: boolean = false;
-  foodMounted: boolean = true;
+  foodMounted: boolean = false;
   foodName: string = "";
 
   constructor(private itemApi : ItemApiService) { }
@@ -25,23 +25,26 @@ export class MenuComponent implements OnInit {
     this.allMounted=true;
     this.bfMounted=false;
     this.ldMounted=false;
+    this.foodMounted = false;
   }
   swapBfMount() {
     this.itemApi.getBfItemsAPI().subscribe(json => this.items = json);
     this.allMounted=false;
     this.bfMounted=true;
     this.ldMounted=false;
+    this.foodMounted = false;
   }
   swapLdMount() {
     this.itemApi.getLdItemsAPI().subscribe(json => this.items = json);
     this.allMounted=false;
     this.bfMounted=false;
     this.ldMounted=true;
+    this.foodMounted = false;
   }
 
   foodSearch() {
-    this.itemApi.getItemByName(this.foodName).subscribe(json => this.items = json);
-    this.foodName="";
+    this.itemApi.getItemByName(this.foodName.toLowerCase()).subscribe(json => this.items = json);
+    //this.foodName="";
     this.foodMounted=true;
     this.allMounted=false;
     this.bfMounted=false;
