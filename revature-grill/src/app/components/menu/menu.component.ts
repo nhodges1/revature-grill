@@ -12,6 +12,8 @@ export class MenuComponent implements OnInit {
   allMounted: boolean = true;
   bfMounted: boolean = false;
   ldMounted: boolean = false;
+  foodMounted: boolean = true;
+  foodName: string = "";
 
   constructor(private itemApi : ItemApiService) { }
   ngOnInit(): void {
@@ -35,5 +37,19 @@ export class MenuComponent implements OnInit {
     this.allMounted=false;
     this.bfMounted=false;
     this.ldMounted=true;
+  }
+
+  foodSearch() {
+    this.itemApi.getItemByNameAPI().subscribe(json => this.items = json);
+       this.foodName="";
+       console.log("Button clicked");
+  }
+
+  foodMount() {
+    this.itemApi.getItemByNameAPI().subscribe(json => this.items = json);
+    this.foodMounted=true;
+    this.allMounted=false;
+    this.bfMounted=false;
+    this.ldMounted=false;
   }
 }

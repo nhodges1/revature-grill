@@ -18,4 +18,8 @@ export class ItemApiService {
         return this.httpClient.get("http://127.0.0.1:9000/items/category/2");
     }
 
+    getItemByNameAPI() : Observable<any>{
+        return this.httpClient.get("http://127.0.0.1:9000/items/name/{name}")
+    }
+
 }
