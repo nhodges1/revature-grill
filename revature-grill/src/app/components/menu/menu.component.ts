@@ -40,13 +40,13 @@ export class MenuComponent implements OnInit {
   }
 
   foodSearch() {
-    this.itemApi.getItemByNameAPI().subscribe(json => this.items = json);
+    this.itemApi.getItemByName(this.foodName).subscribe(json => this.items = json);
        this.foodName="";
        console.log("Button clicked");
   }
 
   foodMount() {
-    this.itemApi.getItemByNameAPI().subscribe(json => this.items = json);
+    this.itemApi.getItemByName(this.foodName).subscribe(json => this.items = json);
     this.foodMounted=true;
     this.allMounted=false;
     this.bfMounted=false;

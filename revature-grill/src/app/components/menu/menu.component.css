@@ -24,3 +24,17 @@
     flex-direction: row;
     align-items: center;
 }
+img {
+    float: left;
+}
+p{
+    margin-top: 10;
+    margin-bottom: 10;
+}
+.itemlist {
+    padding: 20px;
+    clear:both;
+}
+.iteminfo {
+    padding-left:300px;
+}
