@@ -43,10 +43,15 @@
   </div>
 </div>
 <div *ngIf="foodMounted">
-  <div *ngFor="let item of items">
-    <img src='assets/images/{{item.foodId}}.jpg'>
-    <p>{{item.foodName}}, {{item.description}}, {{item.foodTag}}</p>
-    <p>{{item.priceOfItem}}</p>
+  <div class="itemlist" *ngFor="let item of items">
+    <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+    <div class="iteminfo">
+      <p> {{item.foodName}}</p>
+      <p> {{item.description}}</p>
+      <p> {{item.foodTag}}</p>
+      <p> ${{item.priceOfItem}}</p>
+      <p>Add to cart <button>+</button></p>
+    </div>
   </div>
 </div>
 
