@@ -45,7 +45,6 @@ export class MenuComponent implements OnInit {
 
   foodSearch() {
     this.itemApi.getItemByName(this.foodName.toLowerCase()).subscribe(json => this.items = json);
-    //this.foodName="";
     this.foodMounted=true;
     this.allMounted=false;
     this.bfMounted=false;
@@ -62,5 +61,5 @@ export class MenuComponent implements OnInit {
         this.message = "Invalid username or password.";
       }
     );
-}
+  }
 }

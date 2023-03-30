@@ -11,6 +11,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { ItemPageComponent } from './components/item-page/item-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     CartComponent,
     NavbarComponent,
     LoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    ItemPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Item } from "../models/item";
 
@@ -17,23 +17,30 @@ export class ItemApiService {
         foodTag: ""
     };
 
-    constructor(private httpClient : HttpClient) { }
-
+    constructor(private httpClient : HttpClient) { 
+    this.header.append("accept", "text/json");
+    this.header.append("Access-Control-Allow-Origin", "*");}
+    
+    header: HttpHeaders = new HttpHeaders();
     getItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items");
+        return this.httpClient.get("http://127.0.0.1:9000/items", { headers: this.header });
     }
     getBfItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items/category/1");
+        return this.httpClient.get("http://127.0.0.1:9000/items/category/1", { headers: this.header });
     }
     getLdItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items/category/2");
+        return this.httpClient.get("http://127.0.0.1:9000/items/category/2", { headers: this.header });
     }
 
     getItemByName(foodName: string | Item) : Observable<any>{
-        return this.httpClient.get('http://127.0.0.1:9000/items/name/'+ foodName);
+        return this.httpClient.get('http://127.0.0.1:9000/items/name/'+ foodName, { headers: this.header });
+    }
+
+    getItemById(foodId: number | Item) : Observable<any>{
+        return this.httpClient.get('http://127.0.0.1:9000/items/'+ foodId, { headers: this.header });
     }
 
     public addToCart(foodId:number){
-        return this.httpClient.get('http://127.0.0.1:9000/addToCart/'+ foodId);
+        return this.httpClient.get('http://127.0.0.1:9000/addToCart/'+ foodId, { headers: this.header });
     }
 }

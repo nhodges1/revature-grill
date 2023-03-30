@@ -1,0 +1,12 @@
+<section>
+    <div style="margin-top: 100px;" class="item-card">
+    <img src='assets/images/item{{item.foodId}}.jpg' height="400px" width="auto">
+    <div class="iteminfo">
+      <p> {{item.foodName}}</p>
+      <p> {{item.description}}</p>
+      <p> {{item.foodTag}}</p>
+      <p> ${{item.priceOfItem}}</p>
+      <p>Add to cart <button style="cursor: pointer;" (click)="addToCart(item.foodId)">+</button></p>
+    </div>
+</div>
+</section>
