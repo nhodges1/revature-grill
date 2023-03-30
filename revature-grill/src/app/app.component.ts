@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import AOS from 'aos';
 
 
 @Component({
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Revature-Grill';
+
+  ngOnInit() {
+    AOS.init();
+  }
 }
 
