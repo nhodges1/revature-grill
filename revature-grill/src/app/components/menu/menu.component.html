@@ -8,7 +8,7 @@
   <button (click)="foodSearch()" class="type" id="food-name" style="font-size: 1.2em;">Search</button>
 </div>
 <div *ngIf="allMounted">
-  <div class="card-container" data-aos="fade-up" data-aos-duration="3000">
+  <div class="card-container" data-aos="zoom-in-up" data-aos-duration="1000">
     <div class="itemlist" *ngFor="let item of items">
       <button class="card">
         <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
