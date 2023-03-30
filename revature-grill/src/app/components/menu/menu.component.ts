@@ -8,6 +8,7 @@ import { ItemApiService } from "../../services/item-api.service";
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  message: string = "";
   items: Item[] = [];
   allMounted: boolean = true;
   bfMounted: boolean = false;
@@ -51,4 +52,15 @@ export class MenuComponent implements OnInit {
     this.ldMounted=false;
     console.log("Button clicked");
   }
+  addToCart(foodId:number){
+    this.itemApi.addToCart(foodId).subscribe(
+      (response: any) => {
+        console.log(response);
+        this.message = response.message;
+      },
+      (error) => {
+        this.message = "Invalid username or password.";
+      }
+    );
+}
 }
