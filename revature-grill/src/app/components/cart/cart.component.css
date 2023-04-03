@@ -1,3 +1,21 @@
 .cart{
     margin: 60px auto 32px;
 }
+
+section {
+    height: 90vh;
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://images.pexels.com/photos/6493567/pexels-photo-6493567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    filter: brightness(20%);
+}

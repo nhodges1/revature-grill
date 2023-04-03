@@ -8,7 +8,7 @@
   <button (click)="foodSearch()" class="type" id="food-name" style="font-size: 1.2em;">Search</button>
 </div>
 <div *ngIf="allMounted">
-  <div class="card-container" data-aos="zoom-in-up" data-aos-duration="1000">
+  <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
       <a routerLink="{{item.foodId}}" class="card">
         <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
@@ -24,7 +24,7 @@
   </div>
 </div>
 <div *ngIf="bfMounted">
-  <div class="card-container">
+  <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
       <div class="card">
         <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
@@ -40,7 +40,7 @@
   </div>
 </div>
 <div *ngIf="ldMounted">
-  <div class="card-container">
+  <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
       <div class="card">
         <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
@@ -55,7 +55,7 @@
     </div>
   </div>
 </div>
-<div *ngIf="foodMounted">
+<div *ngIf="foodMounted" data-aos="zoom-out" data-aos-duration="500">
   <div class="card-container">
     <div class="itemlist" *ngFor="let item of items">
       <div class="card">
