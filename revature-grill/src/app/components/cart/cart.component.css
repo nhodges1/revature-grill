@@ -1,7 +1,6 @@
 .cart {
     margin: 60px auto 32px;
 }
-<<<<<<< HEAD
 .card {
     height: 60vh;
     margin: 25px;
@@ -65,7 +64,6 @@ h4, h6 {
     padding: 12px 72px;
     border-radius: 3px !important;
 }
-=======
 
 section {
     height: 90vh;
@@ -84,4 +82,3 @@ section::before {
     background-size: cover;
     filter: brightness(20%);
 }
->>>>>>> adb7293a0fb1d0ea3cf464b4681393e19ebc0ae8
