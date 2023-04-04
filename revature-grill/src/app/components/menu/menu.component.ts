@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from "../../models/item";
 import { ItemApiService } from "../../services/item-api.service";
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -16,7 +17,7 @@ export class MenuComponent implements OnInit {
   foodMounted: boolean = false;
   foodName: string = "";
 
-  constructor(private itemApi : ItemApiService) { }
+  constructor(private itemApi : ItemApiService,private cartService : CartService) { }
   ngOnInit(): void {
       this.itemApi.getItemsAPI().subscribe(json => this.items = json);
   }
@@ -51,14 +52,14 @@ export class MenuComponent implements OnInit {
     this.ldMounted=false;
     console.log("Button clicked");
   }
-  addToCart(foodId:number){
+  addtocart(foodId:number){
     this.itemApi.addToCart(foodId).subscribe(
       (response: any) => {
         console.log(response);
         this.message = response.message;
       },
       (error) => {
-        this.message = "Invalid username or password.";
+        this.message = "Error";
       }
     );
   }

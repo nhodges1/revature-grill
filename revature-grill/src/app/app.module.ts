@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ItemPageComponent } from './components/item-page/item-page.component';
+import { MatTableModule } from '@angular/material/table'  ;
+import { MatTableDataSource } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,13 @@ import { ItemPageComponent } from './components/item-page/item-page.component';
   ],
   imports: [
     BrowserModule,
+    MatTableModule,
+    
+  
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   exports: [NavbarComponent],

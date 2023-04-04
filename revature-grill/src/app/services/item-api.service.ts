@@ -38,6 +38,11 @@ export class ItemApiService {
 
     getItemById(foodId: number | Item) : Observable<any>{
         return this.httpClient.get('http://127.0.0.1:9000/items/'+ foodId, { headers: this.header });
+
+    }
+
+    getAllCarts() : Observable<any>{
+        return this.httpClient.get('http://127.0.0.1:9000/allCarts', { headers: this.header });
     }
 
     public addToCart(foodId:number){
