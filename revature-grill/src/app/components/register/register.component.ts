@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit{
   name:string = "";
   email:string = "";
   password:string = "";
+  message:string = "";
   constructor(private registerService : RegisterService) { }
 
   ngOnInit(): void {
@@ -28,5 +29,6 @@ export class RegisterComponent implements OnInit{
       };
       this.registerService.submitRegistration(register).subscribe();
       console.log("Submitted Registration");
+      this.message = "Submitted Registration";
   }
 }
