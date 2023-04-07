@@ -8,12 +8,12 @@ import { Register } from '../models/register';
 })
 export class RegisterService {
 
-    constructor(private http : HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-    submitRegistration(register : Register):Observable<Register>{
-        let header : HttpHeaders = new HttpHeaders();
+    submitRegistration(register: Register): Observable<Register> {
+        let header: HttpHeaders = new HttpHeaders();
         header.append("accept", "text/json");
-        header.append("Access-Control-Allow-Origin","*");
-        return this.http.post<Register>("http://127.0.0.1:9000/register", register, { headers:header });
+        header.append("Access-Control-Allow-Origin", "*");
+        return this.http.post<Register>("http://107.21.67.219:9000/register", register, { headers: header });
     }
 }
