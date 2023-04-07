@@ -17,35 +17,36 @@ export class ItemApiService {
         foodTag: ""
     };
 
-    constructor(private httpClient : HttpClient) { 
-    this.header.append("accept", "text/json");
-    this.header.append("Access-Control-Allow-Origin", "*");}
-    
+    constructor(private httpClient: HttpClient) {
+        this.header.append("accept", "text/json");
+        this.header.append("Access-Control-Allow-Origin", "*");
+    }
+
     header: HttpHeaders = new HttpHeaders();
-    getItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items", { headers: this.header });
+    getItemsAPI(): Observable<any> {
+        return this.httpClient.get("http://34.226.210.109:9000/items", { headers: this.header });
     }
-    getBfItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items/category/1", { headers: this.header });
+    getBfItemsAPI(): Observable<any> {
+        return this.httpClient.get("http://34.226.210.109:9000/items/category/1", { headers: this.header });
     }
-    getLdItemsAPI() : Observable<any>{
-        return this.httpClient.get("http://127.0.0.1:9000/items/category/2", { headers: this.header });
-    }
-
-    getItemByName(foodName: string | Item) : Observable<any>{
-        return this.httpClient.get('http://127.0.0.1:9000/items/name/'+ foodName, { headers: this.header });
+    getLdItemsAPI(): Observable<any> {
+        return this.httpClient.get("http://34.226.210.109:9000/items/category/2", { headers: this.header });
     }
 
-    getItemById(foodId: number | Item) : Observable<any>{
-        return this.httpClient.get('http://127.0.0.1:9000/items/'+ foodId, { headers: this.header });
+    getItemByName(foodName: string | Item): Observable<any> {
+        return this.httpClient.get('http://34.226.210.109:9000/items/name/' + foodName, { headers: this.header });
+    }
+
+    getItemById(foodId: number | Item): Observable<any> {
+        return this.httpClient.get('http://34.226.210.109:9000/items/' + foodId, { headers: this.header });
 
     }
 
-    getAllCarts() : Observable<any>{
-        return this.httpClient.get('http://127.0.0.1:9000/allCarts', { headers: this.header });
+    getAllCarts(): Observable<any> {
+        return this.httpClient.get('http://34.226.210.109:9000/allCarts', { headers: this.header });
     }
 
-    public addToCart(foodId:number){
-        return this.httpClient.get('http://127.0.0.1:9000/addToCart/'+ foodId, { headers: this.header });
+    public addToCart(foodId: number) {
+        return this.httpClient.get('http://34.226.210.109:9000/addToCart/' + foodId, { headers: this.header });
     }
 }

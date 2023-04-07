@@ -1,22 +1,22 @@
 <section>
-    <div class="reg">
+    <form (ngSubmit)="register()" #regForm="ngForm" novalidate>
+      <div class="reg">
         <h1>Register Now</h1>
         <h2>Username</h2>
-        <input [(ngModel)] = "username" placeholder="Type Here">
-
+        <input type="text" [(ngModel)]="username" placeholder="Type Here" name="username" required>
+  
         <h2>Name</h2>
-        <input [(ngModel)] = "name" placeholder="Type Here">
-
+        <input [(ngModel)]="name" placeholder="Type Here" name="name" required>
+  
         <h2>Email</h2>
-        <input [(ngModel)] = "email" placeholder="Type Here">
-
+        <input type="email" placeholder="Type Here" name="email" required>
+  
         <h2>Password</h2>
-        <input [(ngModel)] = "password" placeholder="Type Here">
-
-        <span></span>
-        <button (click)="register()">Register</button>
-
+        <input type="password" [(ngModel)]="password" placeholder="Type Here" name="password" required>
+  
+        <button type="submit" [disabled]="!regForm.form.valid">Register</button>
+  
         <h3>{{message}}</h3>
-    </div>
-
-</section>
+      </div>
+    </form>
+  </section>
