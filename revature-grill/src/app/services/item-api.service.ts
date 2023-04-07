@@ -24,29 +24,29 @@ export class ItemApiService {
 
     header: HttpHeaders = new HttpHeaders();
     getItemsAPI(): Observable<any> {
-        return this.httpClient.get("http://34.226.210.109:9000/items", { headers: this.header });
+        return this.httpClient.get("http://107.21.67.219:9000/items", { headers: this.header });
     }
     getBfItemsAPI(): Observable<any> {
-        return this.httpClient.get("http://34.226.210.109:9000/items/category/1", { headers: this.header });
+        return this.httpClient.get("http://107.21.67.219:9000/items/category/1", { headers: this.header });
     }
     getLdItemsAPI(): Observable<any> {
-        return this.httpClient.get("http://34.226.210.109:9000/items/category/2", { headers: this.header });
+        return this.httpClient.get("http://107.21.67.219:9000/items/category/2", { headers: this.header });
     }
 
     getItemByName(foodName: string | Item): Observable<any> {
-        return this.httpClient.get('http://34.226.210.109:9000/items/name/' + foodName, { headers: this.header });
+        return this.httpClient.get('http://107.21.67.2199:9000/items/name/' + foodName, { headers: this.header });
     }
 
     getItemById(foodId: number | Item): Observable<any> {
-        return this.httpClient.get('http://34.226.210.109:9000/items/' + foodId, { headers: this.header });
+        return this.httpClient.get('http://107.21.67.219:9000/items/' + foodId, { headers: this.header });
 
     }
 
     getAllCarts(): Observable<any> {
-        return this.httpClient.get('http://34.226.210.109:9000/allCarts', { headers: this.header });
+        return this.httpClient.get('http://107.21.67.219:9000/allCarts', { headers: this.header });
     }
 
     public addToCart(foodId: number) {
-        return this.httpClient.get('http://34.226.210.109:9000/addToCart/' + foodId, { headers: this.header });
+        return this.httpClient.get('http://107.21.67.2199:9000/addToCart/' + foodId, { headers: this.header });
     }
 }
