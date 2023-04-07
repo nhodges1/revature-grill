@@ -34,7 +34,7 @@ export class ItemApiService {
     }
 
     getItemByName(foodName: string | Item): Observable<any> {
-        return this.httpClient.get('http://107.21.67.2199:9000/items/name/' + foodName, { headers: this.header });
+        return this.httpClient.get('http://107.21.67.219:9000/items/name/' + foodName, { headers: this.header });
     }
 
     getItemById(foodId: number | Item): Observable<any> {
@@ -47,6 +47,6 @@ export class ItemApiService {
     }
 
     public addToCart(foodId: number) {
-        return this.httpClient.get('http://107.21.67.2199:9000/addToCart/' + foodId, { headers: this.header });
+        return this.httpClient.get('http://107.21.67.219:9000/addToCart/' + foodId, { headers: this.header });
     }
 }
