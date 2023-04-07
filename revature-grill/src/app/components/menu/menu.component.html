@@ -10,8 +10,10 @@
 <div *ngIf="allMounted">
   <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
-      <a routerLink="{{item.foodId}}" class="card">
-        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+      <div class="card">
+        <a routerLink="{{item.foodId}}" style="cursor: pointer;">
+          <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        </a>
         <div class="iteminfo">
           <p> {{item.foodName}}</p>
           <p> {{item.description}}</p>
@@ -19,7 +21,7 @@
           <p> ${{item.priceOfItem}}</p>
           <p>Add to cart <button style="cursor: pointer;" (click)="addtocart(item.foodId)">+</button></p>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
@@ -27,7 +29,9 @@
   <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
       <div class="card">
-        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <a routerLink="{{item.foodId}}" style="cursor: pointer;">
+          <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        </a>
         <div class="iteminfo">
           <p> {{item.foodName}}</p>
           <p> {{item.description}}</p>
@@ -43,7 +47,9 @@
   <div class="card-container" data-aos="zoom-in-up" data-aos-duration="500">
     <div class="itemlist" *ngFor="let item of items">
       <div class="card">
-        <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        <a routerLink="{{item.foodId}}" style="cursor: pointer;">
+          <img src='assets/images/item{{item.foodId}}.jpg' height="200px" width="auto">
+        </a>
         <div class="iteminfo">
           <p> {{item.foodName}}</p>
           <p> {{item.description}}</p>
